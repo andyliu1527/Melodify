@@ -18,6 +18,7 @@ const LoginForm = props => {
 
     return (
         <div>
+            <h1>Login</h1>
             <form>
                 <label>Username
                     <input type="text" value={state.username} onChange={update(username)}/>
@@ -31,3 +32,5 @@ const LoginForm = props => {
         </div>
     )
 }
+
+export default LoginForm;
