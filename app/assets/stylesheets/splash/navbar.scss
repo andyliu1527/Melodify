@@ -1,0 +1,57 @@
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: black;
+}
+
+#nav-links-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav-links-list > li {
+    margin-left: 25px;
+    color: white;
+}
+
+#nav-links-list a {
+    color: white;
+    text-decoration: none;
+}
+
+#logo {
+    height: 50px;
+    width: auto;
+}
+
+#splash {
+    display: flex;
+    flex-direction: column;
+    margin: 400px;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 187, 0);
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    // font-weight: 500;
+    font-size: 60px;
+}
+
+#splash {
+    display: flex;
+}
+
+// #splash-bg {
+
+// }

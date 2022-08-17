@@ -1,5 +1,4 @@
-import react, { useState } from "react";
-import { login } from '../../actions/session_actions';
+import React, { useState } from "react";
 
 const LoginForm = props => {
     const [state, setState] = useState({
@@ -13,21 +12,38 @@ const LoginForm = props => {
     }
 
     const update = field => {
-        return e => setState({[field]: e.currentTarget.value})
+        return e => setState({...state, [field]: e.currentTarget.value})
+    }
+
+    const renderErrors = () => {
+        return (
+            <ul>
+                {props.errors.map((error, i) => (
+                    <li className="login-errors" key={`${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
     }
 
     return (
         <div>
+            <form className="sessionform">
             <h1>Login</h1>
-            <form>
+            <br />
                 <label>Username
-                    <input type="text" value={state.username} onChange={update(username)}/>
+                    <br />
+                    <input className="forminput" type="text" value={state.username} onChange={update("username")} placeholder="Email Address or Username"/>
+                </label>
+                <br/>
+                <label>Password
+                    <br />
+                    <input className="forminput" type="password" value={state.password} onChange={update("password")} placeholder="Password"/>
                 </label>
                 <br />
-                <label>Password
-                    <input type="password" value={state.password} onChange={update(password)}/>
-                </label>
-                <button onClick={handleSubmit}>Log In</button>
+                <button className="formsubmit" onClick={handleSubmit}>Log In</button>
+            { renderErrors() }
             </form>
         </div>
     )

@@ -1,13 +1,18 @@
 import React from "react";
 import { Route } from "react-router-dom"
-import Greeting_container from "./greeting/greeting_container";
+import { AuthRoute, ProtectedRoute } from "../utils/routes_util";
+import GreetingContainer from "./greeting/greeting_container";
 import LoginFormContainer from "./session/login_form_container";
+import SignupFormContainer from "./session/signup_form_container";
+import Navbar from "./navbar/navbar";
+import Splash from "./splash/splash";
 
 const App = () => (
   <div>
-    <h1>Hello, welcome to Melodify!</h1>
-    <Greeting_container />
-    <Route exact path="/login" component={LoginFormContainer} />
+    <Route exact path="/" component={Splash} />
+    <AuthRoute exact path="/login" component={LoginFormContainer} />
+    <AuthRoute exact path="/signup" component={SignupFormContainer} />
+    <ProtectedRoute path="/main" component={GreetingContainer} />
   </div>
 );
 
