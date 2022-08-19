@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { withRouter } from "react-router-dom";
 
 const SignupForm = props => {
 
@@ -7,6 +8,18 @@ const SignupForm = props => {
         username: "",
         password: ""
     })
+
+    const demoLogin = (e) => {
+        e.preventDefault();
+        props.login({
+            username: "demoUser",
+            password: "demo123"
+        }).then( () => props.history.push('/'));
+    }
+
+    useEffect( () => {
+        return () => {props.clearReceiveErrors();}
+    }, [])
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -19,7 +32,7 @@ const SignupForm = props => {
 
     const renderErrors = () => {
         return (
-            <ul>
+            <ul className="errors">
                 {props.errors.map((error, i) => (
                     <li className="login-errors" key={`${i}`}>
                         {error}
@@ -31,7 +44,10 @@ const SignupForm = props => {
 
 
     return (
-        <div>
+        <div className="sessionform-container">
+            <div className="formlogo-container">
+                <a href="#/"><img src={window.logoForm} className="formlogo"/></a>
+            </div>
             <form className="sessionform">
             <h1>Sign up with your email address</h1>
             <br />
@@ -50,11 +66,20 @@ const SignupForm = props => {
                     <input className="forminput" type="password" value={state.password} onChange={update("password")} placeholder="Create a password."/>
                 </label>
                 <br />
-                <button className="formsubmit" onClick={handleSubmit}>Sign Up</button>
+                <button className="formsubmit" onClick={handleSubmit}>SIGN UP</button>
+                <br />
+                <button className="formsubmit" onClick={demoLogin}>DEMO LOG IN</button>
             { renderErrors() }
             </form>
+            <div className="sessionform-footer-container">
+                <div className="seperator"></div>
+                <div className="sessionform-footer">
+                    <h1 className="sessionform-footer-h1">Already have an account?</h1>
+                    <a href="#/login"><button className="formsubmit">LOG IN</button></a>
+                </div>
+            </div>
         </div>
     )
 }
 
-export default SignupForm;
+export default withRouter(SignupForm);

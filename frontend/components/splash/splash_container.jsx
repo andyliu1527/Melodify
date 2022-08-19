@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
 import React from 'react';
 import { login, clearReceiveErrors } from '../../actions/session_actions'
-import LoginForm from './login_form'
+import Splash from "./splash";
 
-const mapStateToProps = ({ errors }) => ({
-    errors: errors.session
+const mapStateToProps = ({session, entities: { users}}) => ({
+    currentUser: users[session.id]
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -12,4 +12,4 @@ const mapDispatchToProps = dispatch => ({
     clearReceiveErrors: () => dispatch(clearReceiveErrors())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginForm)
+export default connect(mapStateToProps, mapDispatchToProps)(Splash)

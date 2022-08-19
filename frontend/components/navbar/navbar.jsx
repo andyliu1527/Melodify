@@ -1,20 +1,20 @@
-import React from "react";
-// import Logo from "/app/assets/images/Logo.png"
+import React from "react"
 
-const Navbar = () => {
+const Navbar = props => {
 
     return (
-        <div id="navbar">
-            <a id="logo" href="#/">MELODIFY</a>
-            <ul id="nav-links-list">
-                <li><a href="https://github.com/andyliu1527" target="_blank">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/andy-liu-9b2a65159/" target="_blank">LinkedIn</a></li>
-                <li>|</li>
-                <li><a href="#/signup">Sign Up</a></li>
-                <li><a href="#/login">Login</a></li>
-            </ul>
+        <div id="main-navbar">
+            <div className="nav-buttons">
+                <button><i className="fa-solid fa-chevron-left"></i></button>
+                <button><i className="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div className="user-dropdown">
+                <h1><i className="fa-solid fa-circle-user"></i>{props.currentUser.username}</h1>
+            <button onClick={props.logout}>logout</button>
+            </div>
         </div>
     )
+
 }
 
 export default Navbar;
