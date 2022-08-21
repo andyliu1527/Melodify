@@ -1,16 +1,18 @@
 # == Schema Information
 #
-# Table name: artists
+# Table name: songs
 #
 #  id         :bigint           not null, primary key
-#  name       :string           not null
-#  bio        :text
+#  title      :string           not null
+#  track_num  :integer          not null
+#  duration   :integer          not null
+#  album_id   :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 require 'test_helper'
 
-class ArtistTest < ActiveSupport::TestCase
+class SongTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
