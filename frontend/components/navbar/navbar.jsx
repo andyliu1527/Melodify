@@ -1,4 +1,5 @@
 import React from "react"
+import DropdownContainer from "../dropdown/dropdown_container";
 
 const Navbar = props => {
 
@@ -8,10 +9,11 @@ const Navbar = props => {
                 <button><i className="fa-solid fa-chevron-left"></i></button>
                 <button><i className="fa-solid fa-chevron-right"></i></button>
             </div>
-            <div className="user-dropdown">
+            <DropdownContainer />
+            {/* <div className="user-dropdown">
                 <h1><i className="fa-solid fa-circle-user"></i>{props.currentUser.username}</h1>
-            <button onClick={props.logout}>logout</button>
-            </div>
+                <button onClick={props.logout}>logout</button>
+            </div> */}
         </div>
     )
 

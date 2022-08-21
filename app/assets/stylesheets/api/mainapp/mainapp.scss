@@ -1,6 +1,6 @@
 #main-app-container {
     // display: flex;
-    background-color: black;
+    background-color: rgb(49, 48, 48);
     color: white;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -55,8 +55,19 @@
 }
 
 #home-container {
-    background-color: black;
     display: block;
     margin-left: 20%;
     height: 100vh;
+}
+
+#dropdown-container {
+    background-color: black;
+    color: white;
+}
+
+#dropdown-content {
+    color: white;
+    border: 1px solid white;
+    margin-top: 10px;
+    z-index: 9;
 }
