@@ -3,7 +3,7 @@ import React from 'react';
 import { login, clearReceiveErrors } from '../../actions/session_actions'
 import Splash from "./splash";
 
-const mapStateToProps = ({session, entities: { users}}) => ({
+const mapStateToProps = ({session, entities: { users }}) => ({
     currentUser: users[session.id]
 })
 

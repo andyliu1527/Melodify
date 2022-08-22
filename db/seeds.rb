@@ -16,6 +16,7 @@ user_2 = User.create!(username: "Andrea", email: "padgzmn@gmail.com", password: 
 demoUser = User.create!(username: "demoUser", email: "demoUser@gmail.com", password: "demo123");
 
 keshi = Artist.create!(name: "Keshi")
+slchld = Artist.create!(name: "slchld")
 
 keshi_always = Album.create!(title: "always", year: 2020, genre: "Pop", single: false, duration: 1170, artist_id: keshi.id)
 song1 = Song.create!(title: "always", track_num: "1", duration: 172, album_id: keshi.id)

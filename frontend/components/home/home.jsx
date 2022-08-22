@@ -1,4 +1,5 @@
 import React from "react";
+import ArtistIndexContainer from "../artist/artist_index_container";
 
 const Home = props => {
     return (

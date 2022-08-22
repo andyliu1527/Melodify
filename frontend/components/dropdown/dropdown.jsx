@@ -27,10 +27,14 @@ const DropDown = props => {
     }
 
     return (
-        <button id="dropdown-container" onClick={showDropDown} onBlur={closeDropDown}>
-            <h1><i className="fa-solid fa-circle-user"></i>Hello {props.currentUser.username}</h1>
-            {state.show ? <DropDownContent /> : null}
-        </button>
+        <div id="dropdown-container">
+            <div id="dropdown-button-container">
+                <button id="dropdown-button" onClick={showDropDown} onBlur={closeDropDown}>
+                    <h1><i className="fa-solid fa-circle-user"></i>{props.currentUser.username}</h1>
+                    {state.show ? <DropDownContent /> : null}
+                </button>
+            </div>
+        </div>
     )
 }
 

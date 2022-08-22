@@ -1,0 +1,37 @@
+#sidebar-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    width: 20%;
+    background-color: rgb(17, 17, 17);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+#sidebar-container div{
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar-container div a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-nav {
+    margin: 10px;
+}
+
+.sidebar-library {
+    margin: 10px;
+}
+
+.separator {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+.sidebar-playlists {
+    margin: 10px;
+}

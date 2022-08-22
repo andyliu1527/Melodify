@@ -1,0 +1,29 @@
+#artist-index-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+    justify-content: space-evenly;
+
+
+    border: 1px solid RED;
+    
+}
+
+.artist-index-item-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20, 20, 20);
+    height: 200px;
+    width: 200px;
+
+
+    border: 1px solid blue;
+}
+
+.artist-index-item-img {
+
+
+    border: 1px solid green;
+}
