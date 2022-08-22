@@ -9,4 +9,5 @@ class Api::ArtistsController < ApplicationController
         @artist = Artist.find(params[:id])
         render :show
     end
+
 end

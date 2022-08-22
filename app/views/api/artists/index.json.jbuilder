@@ -1,7 +1,7 @@
 @artists.each do |artist|
     json.set! artist.id do
         json.partial! 'artist', artist: artist
-        json.profile_picture_URL url_for(artist.profile_picture)
+        json.profile_picture_URL url_for(artist.profile_picture) if artist.profile_picture.attached?
     end
 end
 

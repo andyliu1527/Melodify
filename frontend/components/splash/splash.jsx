@@ -56,9 +56,10 @@ const Splash = props => {
         )
     }
 
-    const mainContent = () => (
-        <Main history={history} location={location} />
-    )
+    const mainContent = () => {
+        debugger;
+        return <Main history={history} location={location} />;
+    }
 
     return props.currentUser ? mainContent() : splashContent();
 

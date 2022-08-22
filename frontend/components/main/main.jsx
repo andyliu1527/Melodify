@@ -10,13 +10,11 @@ import ArtistShowContainer from "../artist/artist_show_container";
 
 const Main = props => (
     <div id="main-app-container">
-        <Route path ="/" component={SidebarContainer} />
-        <Route path="/" component={NavbarContainer} />
+        <ProtectedRoute path ="/" component={SidebarContainer} />
+        <ProtectedRoute path="/" component={NavbarContainer} />
         <ProtectedRoute exact path ="/" component={HomeContainer} />
         <ProtectedRoute exact path="/" component={ArtistIndexContainer} />
-        <Switch>
-            <Route path ="/artists/:id" component={ArtistShowContainer} />
-        </Switch>
+        <Route path ="/artists/:id" component={ArtistShowContainer} />
     </div>
 )
 

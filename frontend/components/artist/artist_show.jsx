@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const ArtistShow = props => {
-
     debugger;
+
+    useEffect( () => {
+        fetchArtist(props.artistId);
+    }, []);
+
     return (
-        <div>
+        <div id="artist-show-container">
             <h1>{props.artist.name}</h1>
         </div>
     );
