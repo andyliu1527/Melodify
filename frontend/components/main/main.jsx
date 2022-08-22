@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../../utils/routes_util";
 import NavbarContainer from "../navbar/navbar_container";
 import SidebarContainer from "../sidebar/sidebar_container";
@@ -10,11 +10,13 @@ import ArtistShowContainer from "../artist/artist_show_container";
 
 const Main = props => (
     <div id="main-app-container">
-        <ProtectedRoute path ="/" component={SidebarContainer} />
-        <ProtectedRoute exact path="/" component={NavbarContainer} />
-        <Route path ="/" component={HomeContainer} />
-        <ProtectedRoute path="/" component={ArtistIndexContainer} />
-        <ProtectedRoute path ="/artists/:id" component={ArtistShowContainer} />
+        <Route path ="/" component={SidebarContainer} />
+        <Route path="/" component={NavbarContainer} />
+        <ProtectedRoute exact path ="/" component={HomeContainer} />
+        <ProtectedRoute exact path="/" component={ArtistIndexContainer} />
+        <Switch>
+            <Route path ="/artists/:id" component={ArtistShowContainer} />
+        </Switch>
     </div>
 )
 

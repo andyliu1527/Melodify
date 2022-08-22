@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     resources :artists, only: [:index, :show]
   end
 
+  resources :artists, only: [:show, :index]
+
   root to: 'static_pages#root'
 end

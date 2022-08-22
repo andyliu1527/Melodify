@@ -5,7 +5,7 @@ const ArtistShow = props => {
     debugger;
     return (
         <div>
-            <h1>{props.artist}</h1>
+            <h1>{props.artist.name}</h1>
         </div>
     );
 }

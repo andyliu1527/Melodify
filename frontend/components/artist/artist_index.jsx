@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import Artist from "./artist_index_item";
+import ArtistIndexItem from "./artist_index_item";
 
 const ArtistIndex = props => {
 
@@ -12,7 +12,7 @@ const ArtistIndex = props => {
     return (
         <div id="artist-index-container">
             {
-                artists.map((artist, i) => <Artist artist={artist} key={`${i}`}/> )
+                artists.map((artist, i) => <ArtistIndexItem artist={artist} key={`${i}`}/> )
             }
         </div>
     );
