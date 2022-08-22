@@ -14,7 +14,9 @@ const Main = props => (
         <ProtectedRoute path="/" component={NavbarContainer} />
         <ProtectedRoute exact path ="/" component={HomeContainer} />
         <ProtectedRoute exact path="/" component={ArtistIndexContainer} />
-        <Route path ="/artists/:id" component={ArtistShowContainer} />
+        <Switch>
+            <ProtectedRoute exact path ="/artists/:id" component={ArtistShowContainer} />
+        /</Switch>
     </div>
 )
 

@@ -12,14 +12,15 @@ const ArtistIndexItem = props => {
         return history.push(`/artists/${id}`);
     }
 
-    console.log(profile_picture_URL)
-
     return (
         <div className="artist-index-item-container" onClick={handleClick}>
             <div className="artist-index-item-img">
-                <img src={profile_picture_URL} />
+                <img className="profile-picture"src={profile_picture_URL} />
             </div>
-            <h1>{name}</h1>
+            <div className="artist-tag">
+                <h1>{name}</h1>
+                <h1>Artist</h1>
+            </div>
         </div>
     );
 }

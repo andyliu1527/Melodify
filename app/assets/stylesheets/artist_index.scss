@@ -12,18 +12,34 @@
 .artist-index-item-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     background-color: rgb(20, 20, 20);
-    height: 200px;
+    height: 250px;
     width: 200px;
+    justify-content: space-between;
 
 
     border: 1px solid blue;
 }
 
 .artist-index-item-img {
-
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
     border: 1px solid green;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    max-height: 90%;
+    max-width: 90%;
+}
+
+.artist-tag {
+    // height: 20%;
+    width: 100%;
+    border: 1px solid white;
 }

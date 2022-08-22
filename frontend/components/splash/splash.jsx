@@ -57,7 +57,6 @@ const Splash = props => {
     }
 
     const mainContent = () => {
-        debugger;
         return <Main history={history} location={location} />;
     }
 
