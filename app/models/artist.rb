@@ -21,4 +21,6 @@ class Artist < ApplicationRecord
         source: :songs
 
     has_one_attached :profile_picture
+    has_one_attached :banner_picture
+    has_one_attached :bio_picture
 end

@@ -1,16 +1,43 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import AlbumIndexContainer from "../albums/album_index_container";
 
 const ArtistShow = props => {
-    console.log("hi");
 
-    // useEffect( () => {
-    //     fetchArtist(props.artistId);
-    // }, []);
+    const [artist, setArtist] = useState({
+        name: "",
+        bio: ""
+    })
+
+    const {artistId, selectedArtist, fetchArtist} = props;
+
+    useEffect( () => {
+        if (!selectedArtist) {
+        fetchArtist(artistId)
+            .then( response =>  setArtist(response.artist) )
+        } else {
+        setArtist(selectedArtist);
+        }
+    }, []);
+
+    const { banner_picture_URL } = artist;
 
     return (
         <div id="artist-show-container">
-            {/* <h1>{props.artist.name}</h1> */}
-            <h1>hello world</h1>
+            <div id = "artist-show">
+                <div id="artist-banner-container">
+                    <img id="artist-banner-img"src={banner_picture_URL} alt="" />
+                    <div id="artist-header">
+                        <h1>{artist.name}</h1>
+                    </div>
+                </div>
+                <AlbumIndexContainer />
+                <div id="artist-bio">
+                    <img id="bio-picture" src="bio_picture" alt="" />
+                    <div id="artist-bio-text">
+                        <p>{artist.bio}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

@@ -4,8 +4,8 @@ import ArtistShow from "./artist_show"
 
 
 const mSTP = ( { entities: { artists } }, ownProps) => ({
-    artist: artists[ownProps.match.params.id],
-    artistId: ownProps.match.params.id
+    selectedArtist: artists[ownProps.match.params.id],
+    artistId: parseInt(ownProps.match.params.id)
 })
 
 const mDTP = dispatch => ({

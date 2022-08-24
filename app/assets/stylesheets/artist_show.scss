@@ -1,3 +1,48 @@
 #artist-show-container {
+    display: flex;
+    flex-direction: column;
     color: white;
+    // margin-left: 20%;
+    border: 1px solid white;
+}
+
+#artist-header h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+#artist-show {
+    border: 1px solid red;
+}
+
+#artist-banner-container {
+    height: 100%;
+    width: 100%;
+    contain: content;
+    border: 1px solid blue;
+}
+
+#artist-banner-img {
+
+}
+
+#artist-header {
+    // z-index: 9;
+    border: 1px solid green;
+}
+
+#bio-picture {
+    
+}
+#artist-bio {
+
+    height: 500px;
+    width: 500px;
+    border: 1px solid blue;
+}
+
+
+
+#artist-bio-text {
+    border: 1px solid green;
 }

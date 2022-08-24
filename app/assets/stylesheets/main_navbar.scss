@@ -1,10 +1,11 @@
 #main-navbar {
     display: flex;
     position: fixed;
-    height: 5%;
+    height: 7.5%;
     width: 80%;
     margin-left: 20%;
     justify-content: space-between;
+    z-index: 999;
     // background-color: purple;
 
     border: 1px solid white;
