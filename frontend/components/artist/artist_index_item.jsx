@@ -4,7 +4,7 @@ import { withRouter, useHistory } from 'react-router-dom'
 
 const ArtistIndexItem = props => {
 
-    const {id, name, bio, profile_picture_URL} = props.artist
+    const {id, name, bio, profile_URL} = props.artist
     
     let history = useHistory();
 
@@ -15,7 +15,7 @@ const ArtistIndexItem = props => {
     return (
         <div className="artist-index-item-container" onClick={handleClick}>
             <div className="artist-index-item-img">
-                <img className="profile-picture"src={profile_picture_URL} />
+                <img className="profile-picture"src={profile_URL} />
             </div>
             <div className="artist-tag">
                 <h1>{name}</h1>

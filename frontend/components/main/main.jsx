@@ -14,7 +14,7 @@ const Main = props => (
         <div id="main-content">
         <Switch>
             <ProtectedRoute exact path ="/artists/:id" component={ArtistShowContainer} />
-        /</Switch>
+        </Switch>
         </div>
     </div>
 )
