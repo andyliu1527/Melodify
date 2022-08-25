@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import SongIndex from "../song/song_index";
 
 const AlbumShow = props => {
 
@@ -8,7 +9,9 @@ const AlbumShow = props => {
         genre: "",
         single: "",
         duration: "",
-        artist_id: ""
+        artist_id: "",
+        // artist: { name: ""},
+        // album_cover_URL: ""
     })
 
     const { albumId, selectedAlbum, fetchAlbum } = props;
@@ -22,14 +25,14 @@ const AlbumShow = props => {
         }
     }, []);
 
-    const { album_cover_URL } = album;
+    const { artist, album_cover_URL } = album;
 
     return (
         <div className="album-show-container">
             <div className="album-header-container">
                 <div className="album-header">
                     <div id="album-cover-container">
-                        <img src={album_cover_URL} alt="" />
+                        <img id="album_cover" src={album_cover_URL} alt="" />
                     </div>
                     <div id="album-artist-info">
                         <h1>{album.title}</h1>
@@ -38,7 +41,7 @@ const AlbumShow = props => {
                 </div>
             </div>
             <div id="song-show">
-
+                {/* <SongIndex album={album}/> */}
             </div>
         </div>
     );

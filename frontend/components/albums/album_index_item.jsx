@@ -12,7 +12,6 @@ const AlbumIndexItem = props => {
         return history.push(`/albums/${id}`);
     }
 
-    debugger;
     return (
         <div className="album-index-item-container" onClick={handleClick}>
             <div className="album-index-item-img">

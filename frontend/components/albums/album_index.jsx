@@ -1,4 +1,4 @@
-import React, { useEffect }from "react";
+import React, { useState, useEffect }from "react";
 import AlbumIndexItem from "./album_index_item";
 
 const AlbumIndex =  props => {
@@ -6,7 +6,7 @@ const AlbumIndex =  props => {
     const { albums, fetchArtist, artistId} = props
 
     useEffect( () => {
-        fetchArtist(artistId);
+        fetchArtist(artistId)
     }, []);
 
     return (
