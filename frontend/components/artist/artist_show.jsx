@@ -22,16 +22,18 @@ const ArtistShow = props => {
     const { banner_URL, bio_URL } = artist;
 
     return (
-        <div id="artist-show-container">
-            <div id = "artist-show">
+        <div className="artist-show-container">
+            <div className= "artist-show-header">
                 <div id="artist-banner-container">
-                    <img id="artist-banner-img" src={banner_URL} alt="" />
-                    <div id="artist-header">
-                        <h1>{artist.name}</h1>
-                    </div>
+                    <img id="artist-banner-img"src={banner_URL} alt="" />
                 </div>
+                <div id="artist-header">
+                    <h1>{artist.name}</h1>
+                </div>
+            </div>
                 <AlbumIndexContainer />
-                <div id="artist-bio">
+            <div className="artist-bio-container">
+                <div className="artist-bio">
                     <img id="bio-picture" src={bio_URL} alt="" />
                     <div id="artist-bio-text">
                         <p>{artist.bio}</p>

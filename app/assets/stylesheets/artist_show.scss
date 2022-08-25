@@ -1,18 +1,18 @@
-#artist-show-container {
-    display: flex;
-    flex-direction: column;
+.artist-show-container {
+    // display: flex;
+    // flex-direction: column;
+    height: 100%;
+    width: 100%;
     color: white;
     // margin-left: 20%;
     border: 1px solid white;
 }
 
-#artist-header h1{
-    font-size: 50px;
-    font-weight: 700;
-}
+.artist-show-header{
 
-#artist-show {
-    border: 1px solid red;
+    height: 25%;
+
+    border: 3px solid red;
 }
 
 #artist-banner-container {
@@ -23,7 +23,8 @@
 }
 
 #artist-banner-img {
-
+    max-height: 100%;
+    max-width: 100%;
 }
 
 #artist-header {
@@ -31,18 +32,26 @@
     border: 1px solid green;
 }
 
-#bio-picture {
-    
-}
-#artist-bio {
+.artist-bio-container {
 
-    height: 500px;
-    width: 500px;
+    height: 40%;
+    width: 100%;
+
     border: 1px solid blue;
 }
+.artist-bio {
 
+    height: 100%;
+    width: 100%;
+    border: 1px solid red;
+}
 
+#bio-picture {
+    max-height: 100%;
+    max-width: 100%;
+}
 
 #artist-bio-text {
+    z-index: 1;
     border: 1px solid green;
 }

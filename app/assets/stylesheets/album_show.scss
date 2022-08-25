@@ -1,0 +1,39 @@
+.album-show-container {
+
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+}
+
+.album-header-container {
+
+    height: 25%;
+    border: 1px solid red;
+}
+
+.album-header {
+
+    display: flex;
+    height: 100%;
+
+    border: 2px solid green;
+}
+
+#album-cover-container {
+
+    height: 250px;
+    width: 250px;
+    
+    border: 1px solid yellow;
+}
+
+#album-artist-info {
+
+    border: 1px solid purple;
+}
+
+#song-show {
+
+    height: 50%;
+    border: 1px solid blue; 
+}

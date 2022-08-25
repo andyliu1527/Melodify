@@ -25,14 +25,15 @@ const AlbumShow = props => {
     const { album_cover_URL } = album;
 
     return (
-        <div>
-            <div id="album-header-containerx">
+        <div className="album-show-container">
+            <div className="album-header-container">
                 <div className="album-header">
                     <div id="album-cover-container">
                         <img src={album_cover_URL} alt="" />
                     </div>
                     <div id="album-artist-info">
                         <h1>{album.title}</h1>
+                        {/* <h1>{artist.name}</h1> */}
                     </div>
                 </div>
             </div>

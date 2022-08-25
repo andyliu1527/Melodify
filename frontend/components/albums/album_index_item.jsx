@@ -4,7 +4,7 @@ import { withRouter, useHistory } from 'react-router-dom'
 
 const AlbumIndexItem = props => {
 
-    const {id, title, year, genre, single, duration, artist_id } = props.album
+    const {id, title, year, genre, single, duration, artist_id, album_cover_URL } = props.album
 
     let history = useHistory();
 
@@ -12,10 +12,11 @@ const AlbumIndexItem = props => {
         return history.push(`/albums/${id}`);
     }
 
+    debugger;
     return (
         <div className="album-index-item-container" onClick={handleClick}>
             <div className="album-index-item-img">
-                <img className="album-cover" src="" alt="" />
+                <img className="album-cover" src={album_cover_URL} alt="" />
             </div>
             <div id="album-tag">
                 <h1>{title}</h1>
