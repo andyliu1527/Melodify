@@ -1,13 +1,19 @@
 import { connect } from "react-redux";
 import AlbumShow from "./album_show";
-import { fetchAlbum } from "../../actions/albums_actions"
+import { fetchAlbum } from "../../actions/albums_actions";
 
 
-const mSTP = ({ entities: { albums } }, ownProps) => ({
-    selectedAlbum: albums[ownProps.match.params.id],
-    albumId: parseInt(ownProps.match.params.id),
+const mSTP = (state, ownProps) => {
+    const albums = state.entities.albums;
+    const artist = state.entities.artists;
 
-})
+    return {
+        selectedAlbum: albums[ownProps.match.params.id],
+        albumId: parseInt(ownProps.match.params.id),
+        artist: artist,
+    }
+
+}
 
 const mDTP = dispatch => ({
     fetchAlbum: albumId => dispatch(fetchAlbum(albumId))

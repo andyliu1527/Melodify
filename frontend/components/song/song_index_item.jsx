@@ -2,18 +2,20 @@ import React from "react";
 
 const SongIndexItem = props => {
 
-    const { song } = props.song
+
+    const { title, track_num, duration } = props.song
+
 
     return (
         <div className="song-index-item">
             <div>
-                {song.track_num}
+                {track_num}
             </div>
             <div>
-                {song.title}
+                {title}
             </div>
             <div>
-                {song.duration}
+                {duration}
             </div>
         </div>
     );

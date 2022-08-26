@@ -8,9 +8,9 @@ const receiveArtists = artists => ({
     artists
 });
 
-const receiveArtist = artist => ({
+const receiveArtist = payload => ({
     type: RECEIVE_ARTIST,
-    artist
+    payload
 });
 
 export const fetchArtists = () => dispatch => {

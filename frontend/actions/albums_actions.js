@@ -8,9 +8,9 @@ const receiveAlbums = albums => ({
     albums
 });
 
-const receiveAlbum = album => ({
+const receiveAlbum = payload => ({
     type: RECEIVE_ALBUM,
-    album
+    payload
 });
 
 export const fetchAlbums = () => dispatch => {
@@ -21,4 +21,4 @@ export const fetchAlbums = () => dispatch => {
 export const fetchAlbum = albumId => dispatch => {
     return albumsAPI.fetchAlbum(albumId)
         .then(album => dispatch(receiveAlbum(album)))
-}
+};

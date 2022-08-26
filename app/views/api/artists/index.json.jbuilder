@@ -1,6 +1,5 @@
 @artists.each do |artist|
     json.set! artist.id do
-        # debugger; 
         json.partial! 'artist', artist: artist
         json.profile_URL url_for(artist.profile_picture) if artist.profile_picture.attached?
         json.banner_URL url_for(artist.banner_picture) if artist.banner_picture.attached?

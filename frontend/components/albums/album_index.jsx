@@ -3,10 +3,12 @@ import AlbumIndexItem from "./album_index_item";
 
 const AlbumIndex =  props => {
 
-    const { albums, fetchArtist, artistId} = props
+    const { albums, fetchArtist, fetchAlbums, artistId} = props
 
     useEffect( () => {
-        fetchArtist(artistId)
+        if (Object.keys(albums).length === 0) {
+            fetchArtist(artistId)
+        }
     }, []);
 
     return (

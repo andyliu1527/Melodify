@@ -5,7 +5,9 @@ const ArtistShow = props => {
 
     const [artist, setArtist] = useState({
         name: "",
-        bio: ""
+        bio: "",
+        banner_URL: "",
+        bio_URL: ""
     })
 
     const {artistId, selectedArtist, fetchArtist} = props;
@@ -13,7 +15,7 @@ const ArtistShow = props => {
     useEffect( () => {
         if (!selectedArtist) {
         fetchArtist(artistId)
-            .then( response =>  setArtist(response.artist) )
+            .then( response =>  setArtist(response.payload.artist) )
         } else {
         setArtist(selectedArtist);
         }

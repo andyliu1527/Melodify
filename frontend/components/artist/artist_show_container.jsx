@@ -3,10 +3,14 @@ import { fetchArtist } from "../../actions/artists_actions"
 import ArtistShow from "./artist_show"
 
 
-const mSTP = ( { entities: { artists } }, ownProps) => ({
-    selectedArtist: artists[ownProps.match.params.id],
-    artistId: parseInt(ownProps.match.params.id)
-})
+const mSTP = ( state, ownProps) => {
+    const artists = state.entities.artists
+
+    return {
+        selectedArtist: artists[ownProps.match.params.id],
+        artistId: parseInt(ownProps.match.params.id)
+    }
+}
 
 const mDTP = dispatch => ({
     fetchArtist: artistId => dispatch(fetchArtist(artistId))

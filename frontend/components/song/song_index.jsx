@@ -4,10 +4,10 @@ import SongIndexItem from "./song_index_item";
 
 const SongIndex = props => {
 
-    const { songs, fetchSongs } = props
+    const { albumId, songs, fetchAlbum } = props
 
     useEffect( () => {
-        fetchSongs();
+        fetchAlbum(albumId);
     }, []);
 
     return (
@@ -19,7 +19,7 @@ const SongIndex = props => {
             </div>
             <div className="song-index-item-container">
                 {
-                    songs.map((song, i) => <SongIndexItem song={song} key={`${i}`}/> )
+                    Object.values(songs).map((song, i) => <SongIndexItem song={song} key={`${i}`}/> )
                 }
             </div>
         </div>

@@ -45,32 +45,61 @@ slchld.banner_picture.attach(io: slchld_banner, filename: "slchld_banner.jpeg")
 slchld.bio_picture.attach(io: slchld_bio, filename: "slchld_bio.jpeg")
 
 keshi_always = Album.create!(title: "always", year: 2020, genre: "Pop", single: false, duration: 1170, artist_id: keshi.id)
-song1 = Song.create!(title: "always", track_num: "1", duration: 172, album_id: keshi_always.id)
-song2 = Song.create!(title: "more", track_num: "2", duration: 184, album_id: keshi_always.id)
-song3 = Song.create!(title: "drunk", track_num: "3", duration: 227, album_id: keshi_always.id)
-song4 = Song.create!(title: "talk", track_num: "4", duration: 174, album_id: keshi_always.id)
-song5 = Song.create!(title: "B.Y.S", track_num: "5", duration: 165, album_id: keshi_always.id)
-song6 = Song.create!(title: "us", track_num: "6", duration: 248, album_id: keshi_always.id)
-
+always1 = Song.create!(title: "always", track_num: 1, duration: 172, album_id: keshi_always.id)
+always2 = Song.create!(title: "more", track_num: 2, duration: 184, album_id: keshi_always.id)
+always3 = Song.create!(title: "drunk", track_num: 3, duration: 227, album_id: keshi_always.id)
+always4 = Song.create!(title: "talk", track_num: 4, duration: 174, album_id: keshi_always.id)
+always5 = Song.create!(title: "B.Y.S", track_num: 5, duration: 165, album_id: keshi_always.id)
+always6 = Song.create!(title: "us", track_num: 6, duration: 248, album_id: keshi_always.id)
 keshi_always_cover = URI.open('https://cloudyfy-photos.s3.amazonaws.com/cloudyfyphotos/artists/keshi/albums/always.jpeg')
 keshi_always.album_cover.attach(io: keshi_always_cover, filename: 'always.jpeg')
 
+
+
+
 keshi_gabriel = Album.create!(title: "GABRIEL", year: 2022, genre: "Pop", single: false, duration: 1959, artist_id: keshi.id)
+gabriel1 = Song.create!(title: "GET IT", track_num: 1, duration: 151, album_id: keshi_gabriel.id)
+gabriel2 = Song.create!(title: "SOMEBODY", track_num: 2, duration: 164, album_id: keshi_gabriel.id)
+gabriel3 = Song.create!(title: "WESTSIDE", track_num: 3, duration: 184, album_id: keshi_gabriel.id)
+gabriel4 = Song.create!(title: "TOUCH", track_num: 4, duration: 205, album_id: keshi_gabriel.id)
+gabriel5 = Song.create!(title: "MILLI", track_num: 5, duration: 135, album_id: keshi_gabriel.id)
+gabriel6 = Song.create!(title: "PERE", track_num: 6, duration: 48, album_id: keshi_gabriel.id)
+gabriel7 = Song.create!(title: "HELL/HEAVEN", track_num: 7, duration: 160, album_id: keshi_gabriel.id)
+gabriel8 = Song.create!(title: "ANGOSTURA", track_num: 8, duration: 171, album_id: keshi_gabriel.id)
+gabriel9 = Song.create!(title: "UNDERSTAND", track_num: 9, duration: 150, album_id: keshi_gabriel.id)
+gabriel10 = Song.create!(title: "LIMBO", track_num: 10, duration: 212, album_id: keshi_gabriel.id)
+gabriel11 = Song.create!(title: "ANGEL", track_num: 11, duration: 247, album_id: keshi_gabriel.id)
+gabriel12 = Song.create!(title: "GABRIEL", track_num: 12, duration: 128, album_id: keshi_gabriel.id)
 keshi_gabriel_cover = URI.open('https://cloudyfy-photos.s3.amazonaws.com/cloudyfyphotos/artists/keshi/albums/gabriel.jpeg')
 keshi_gabriel.album_cover.attach(io: keshi_gabriel_cover, filename: 'gabriel.jpeg')
 
+
+
 keshi_2soon = Album.create!(title:"2 soon", year: 2018, genre: "Pop", single: true, duration: 206, artist_id: keshi.id)
+soon = Song.create!(title: "2 soon", track_num: 1, duration: 206, album_id: keshi_2soon.id)
 keshi_2soon_cover = URI.open('https://cloudyfy-photos.s3.amazonaws.com/cloudyfyphotos/artists/keshi/albums/2soon.jpeg')
 keshi_2soon.album_cover.attach(io: keshi_2soon_cover, filename: '2soon.jpeg')
 
+
+
+
 jaypark_yacht = Album.create!(title: "YACHT", year: 2017, genre: "Hip-Hop", single: true, duration: 246, artist_id: jaypark.id)
+yacht = Song.create!(title: "YACHT(k) (Feat. Sik-K)", track_num: 1, duration: 246, album_id: jaypark_yacht.id)
 jaypark_yacht_cover = URI.open('https://cloudyfy-photos.s3.amazonaws.com/cloudyfyphotos/artists/jaypark/albums/yacht.jpeg')
 jaypark_yacht.album_cover.attach(io: jaypark_yacht_cover, filename: 'yacht.jpeg')
 
+
+
+
 jaypark_summeride = Album.create!(title: "SUMMERIDE", year: 2021, genre: "Hip-Hop", single: true, duration: 218, artist_id: jaypark.id)
+summeride = Song.create!(title: "SUMMERIDE", track_num: 1, duration: 218, album_id: jaypark_summeride.id)
 jaypark_summeride_cover = URI.open('https://cloudyfy-photos.s3.amazonaws.com/cloudyfyphotos/artists/jaypark/albums/summeride.jpeg')
 jaypark_summeride.album_cover.attach(io: jaypark_summeride_cover, filename: 'summeride.jpeg')
 
+
+
+
 slchld_youwontbethereforme = Album.create!(title: "you won't be there for me", year: 2021, genre: "Pop", single: true, duration: 182, artist_id: slchld.id)
+youwontbethereforme = Song.create!(title: "you won't be there for me", track_num: 1, duration: 182, album_id: slchld_youwontbethereforme.id)
 slchld_youwontbethereforme_cover = URI.open('https://cloudyfy-photos.s3.amazonaws.com/cloudyfyphotos/artists/shchld/albums/youwontbethereforme.jpeg')
 slchld_youwontbethereforme.album_cover.attach(io: slchld_youwontbethereforme_cover, filename: 'youwontbethereforme.jpeg')

@@ -8,9 +8,10 @@ const albumsReducer = (state = {}, action) => {
         case RECEIVE_ALBUMS:
             return action.albums
         case RECEIVE_ALBUM:
-            return Object.assign({}, state, { [action.album.id]: action.album })
+            return Object.assign({}, state, { [action.payload.album.id]: action.payload.album })
         case RECEIVE_ARTIST:
-            return Object.assign({}, state, action.artist.albums )
+            // return Object.assign({}, state, action.artist.albums )
+            return Object.assign({}, state, action.payload.albums  )
         default:
             return state;
     }

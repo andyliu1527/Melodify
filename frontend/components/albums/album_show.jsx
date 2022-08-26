@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import SongIndex from "../song/song_index";
+import SongIndexContainer from "../song/song_index_container";
 
 const AlbumShow = props => {
 
@@ -10,22 +10,23 @@ const AlbumShow = props => {
         single: "",
         duration: "",
         artist_id: "",
-        // artist: { name: ""},
+        // artist: "",
         // album_cover_URL: ""
     })
 
-    const { albumId, selectedAlbum, fetchAlbum } = props;
+    const { artist, albumId, selectedAlbum, fetchAlbum } = props;
 
     useEffect( () => {
         if (!selectedAlbum) {
         fetchAlbum(albumId)
-            .then( response =>  setAlbum(response.album) )
+            .then( response =>  setAlbum(response.payload.album) )
         } else {
         setAlbum(selectedAlbum);
         }
     }, []);
 
-    const { artist, album_cover_URL } = album;
+    const { album_cover_URL } = album;
+
 
     return (
         <div className="album-show-container">
@@ -36,12 +37,12 @@ const AlbumShow = props => {
                     </div>
                     <div id="album-artist-info">
                         <h1>{album.title}</h1>
-                        {/* <h1>{artist.name}</h1> */}
+                        <h1>{artist.name}</h1>
                     </div>
                 </div>
             </div>
             <div id="song-show">
-                {/* <SongIndex album={album}/> */}
+                <SongIndexContainer />
             </div>
         </div>
     );
